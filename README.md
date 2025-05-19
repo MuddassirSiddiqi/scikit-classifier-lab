@@ -1,89 +1,79 @@
 
 
-```markdown
+````markdown
 # Scikit-Classifier-Lab
 
-This project explores and compares the performance of several classification algorithms using both real and synthetic datasets. It includes baseline accuracy evaluations, noise sensitivity tests, and hyperparameter tuning using `GridSearchCV`.
-
-## 📁 Repository Structure
-
-This repository contains two core parts:
-
-- **Part A**: Evaluation of various classifiers on the Iris dataset (clean and noisy versions).
-- **Part B**: Hyperparameter tuning and evaluation on synthetic datasets (moons, circles, and blobs).
+This repository demonstrates the evaluation and tuning of classical classification algorithms using both real-world and synthetic datasets. It includes baseline testing, noise robustness assessment, and hyperparameter optimization using `GridSearchCV`.
 
 ---
 
-## 🧠 Algorithms Used
+## 📁 Project Structure
 
-The following classifiers are implemented and compared:
+- **Part A**: Evaluates classifiers on the Iris dataset (clean and noisy versions).
+- **Part B**: Performs hyperparameter tuning on synthetic datasets (moons, circles, blobs).
+
+---
+
+## 🧠 Classifiers Implemented
 
 - K-Nearest Neighbors (KNN)
 - Decision Tree Classifier
 - Random Forest Classifier
 - Naive Bayes (GaussianNB)
-- Support Vector Machine (Linear and Kernel)
+- Support Vector Machine (Linear and RBF Kernel)
 
 ---
 
-## 📌 Part A – Classification on Iris Dataset
+## 📌 Part A – Iris Dataset Classification
 
-### Description
+### Overview
 
-This script loads the Iris dataset, adds Gaussian noise to evaluate classifier robustness, and tests multiple classifiers using standard scaling and accuracy as the performance metric.
+This part loads the Iris dataset and adds Gaussian noise to test model resilience. It evaluates multiple classifiers with accuracy scores as the metric.
 
 ### Features
 
-- Evaluation of classifiers on clean and noisy datasets.
-- Pipeline integration with `StandardScaler`.
-- Accuracy comparison printed for both dataset variants.
+- Clean vs. Noisy data performance comparison.
+- Standardized preprocessing using `StandardScaler`.
+- Accuracy evaluation across 6 classifiers.
 
-### Example Output
+### Output
 
-```
-
-Iris (Clean) - Linear SVM Accuracy: 0.9778
-Iris (Noisy) - Linear SVM Accuracy: 0.9333
-...
-
-```
+![Part A Output](https://github.com/MuddassirSiddiqi/scikit-classifier-lab/blob/master/PartA%20Output.png)
 
 ---
-![Output Image](https://github.com/MuddassirSiddiqi/scikit-classifier-lab/blob/master/PartA%20Output.png)
-## 🔍 Part B – Hyperparameter Tuning on Synthetic Datasets
 
-### Description
+## 🔍 Part B – Tuning on Synthetic Datasets
 
-This part uses synthetic datasets (`make_moons`, `make_circles`, `make_blobs`) to test classifier performance under different geometrical data distributions. It applies `GridSearchCV` for hyperparameter tuning.
+### Overview
+
+This part uses generated datasets (moons, circles, blobs) to simulate various classification scenarios. GridSearchCV is applied to tune key hyperparameters for each model.
 
 ### Features
 
-- Grid search for optimal model parameters.
-- Pipelines with scaling and classifier integration.
-- Outputs best hyperparameters and final accuracy scores.
+- Parameter tuning via `GridSearchCV`.
+- Multiple dataset geometries tested.
+- Evaluation of best accuracy and parameter combinations.
 
-### Example Output
+### Output
 
-```
+![Part B Output](https://github.com/MuddassirSiddiqi/scikit-classifier-lab/blob/master/PartB%20Output.png)
 
-Moons - Random Forest Accuracy: 0.9000, Best Params: {'randomforestclassifier\_\_max\_depth': 5, 'randomforestclassifier\_\_n\_estimators': 50}
+---
 
+## 🧪 Requirements
+
+Install dependencies with:
+
+```bash
+pip install scikit-learn numpy
 ````
 
 ---
-![Output Image](https://github.com/MuddassirSiddiqi/scikit-classifier-lab/blob/master/PartB%20Output.png)
-## 🧪 Installation and Usage
 
-### Requirements
-
-- Python 3.x
-- scikit-learn
-- numpy
-
-### Run Scripts
+## ▶️ Running the Project
 
 ```bash
-# Clone the repository
+# Clone the repo
 git clone https://github.com/MuddassirSiddiqi/scikit-classifier-lab.git
 cd scikit-classifier-lab
 
@@ -92,30 +82,35 @@ python part_a.py
 
 # Run Part B
 python part_b.py
-````
+```
 
 ---
 
-## 🗃️ Dataset Sources
+## 🗃️ Datasets Used
 
-* **Iris Dataset**: Provided by `sklearn.datasets.load_iris`
-* **Synthetic Datasets**: Generated using `make_moons`, `make_circles`, and `make_blobs`
+* **Iris Dataset**: From `sklearn.datasets.load_iris`
+* **Synthetic Datasets**: Created using `make_moons`, `make_circles`, `make_blobs`
 
 ---
 
-## 📈 Future Enhancements
+## 📈 Possible Enhancements
 
-* Visualization of decision boundaries.
-* Inclusion of ensemble techniques like stacking or boosting.
-* Evaluation using additional metrics (F1, ROC AUC).
+* Visual decision boundaries for classifiers.
+* Add ensemble methods (e.g., Bagging, Boosting, Stacking).
+* Include advanced metrics like ROC AUC, Precision, Recall.
 
 ---
 
 ## 📜 License
 
-This project is released under the [MIT License](LICENSE).
+This project is licensed under the [MIT License](LICENSE).
 
 ```
 
+### Instructions
 
+1. Copy the above into a file named `README.md` at the root of your GitHub repository.
+2. Ensure that `PartA Output.png` and `PartB Output.png` are correctly uploaded and accessible at the specified URLs.
+
+Let me know if you want a version with local image referencing or image resizing via raw GitHub content links.
 ```
