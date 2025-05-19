@@ -1,4 +1,4 @@
-Here is the `README.md` content in proper markdown format. You can copy and paste this into a file named `README.md` in the root directory of your repository.
+
 
 ```markdown
 # Scikit-Classifier-Lab
